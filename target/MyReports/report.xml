@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="7.938">
+    <testcase classname="Validation for Wiki Search Page" name="Search on wiki Search Page with default  settings" time="3.612">
+        <system-out><![CDATA[Given User navigates to "WikiSearchPage"....................................passed
+When User enters text "Gmail" in "SearchTextBox"............................passed
+And Clicks on "SearchButton"................................................passed
+Then Extract title of "FirstSearchResult" and check if it contains "Gmail"..passed
+And Take the screenshot of search result....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation for Wiki Search Page" name="Select the checkbox and validate correct namespace selected" time="1.68">
+        <system-out><![CDATA[Given User navigates to "WikiSearchPage"....................................passed
+When Clicks on "SearchIn"...................................................passed
+And Clicks on "GeneralHelp".................................................passed
+Then Extract number of namespace added should be 3..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation for Wiki Search Page" name="Provide garbage value and see the search result" time="2.446">
+        <system-out><![CDATA[Given User navigates to "WikiSearchPage"....................................passed
+When User enters text "!#$%^^&()__)&^%$#" in "SearchTextBox"................passed
+And Clicks on "SearchButton"................................................passed
+Then Validate text displayed is "There were no results matching the query." at location "NoSearchResult".passed
+]]></system-out>
+    </testcase>
+</testsuite>
